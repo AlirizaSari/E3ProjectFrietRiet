@@ -12,7 +12,6 @@ Je maakt een eigen branch aan per onderdeel waar je aan gaat werken en merged di
  
 Deze voorzorgs maatregelen zorgen voor rust en regelmaat in ons werken. Door dit concecuent te doen kunnen we makkelijk met minder stress werken. Hopelijk gaan ons kwaliteit van werken ook vooruit.
 
-
 <h2>Conventies:</h2>
 <h3>Review conventies:</h3><br>
 - Duidelijke reviewcommits<br>
@@ -21,7 +20,7 @@ Deze voorzorgs maatregelen zorgen voor rust en regelmaat in ons werken. Door dit
 - Reviewcommits moeten in het Engels<br>
 - Pull Request moet per functionaliteit gebeuren<br>
 
-<h3>Codeer conventies</h3>
+<h3>Codeer conventies C#</h3>
 Je code moet gedocumenteerd zijn d.m.v. van summaries (drie slashes voor een method)<br>
 Comments zijn ook goed, maar moeten in het Engels.
 Commits moeten ook in het Engels, let op hoofdletters.
@@ -78,3 +77,29 @@ Textbox:<br>
 Begin met 'txb' en daarna PascalCase.<br>
 Voorbeeld: 'txbNameOfItem'<br>
 
+<h3>Codeer conventies Web</h3>
+
+<b>Controllers</b><br>
+Controllers should be in PascalCase.<br> (For example: BlogController, AuthController, UserController.)<br>
+
+<b>Database</b><br>
+DB tables should be in lower case.<br> (For example: posts, project_tasks, uploaded_images.)<br>
+Table column names should be in snake_case.<br> (For example: post_body, id, created_at.)<br>
+Primary Key  should normally be id.<br>
+Foreign keys should be the model name (singular), with 'id' appended to it.<br> (For example: comment_id, user_id.)<br>
+
+<b>Variables</b><br>
+Normal variables should typically be in camelCase.<br> (For example: $users = ..., $bannedUsers = ...)<br>
+If the variable contains an array or collection of multiple items then the variable name should be in plural.<br> (For example: $users = User::all();)<br>
+
+<b>Models</b><br>
+A model should be in PascalCase.<br> (For example: User (\App\User or \App\Models\User, etc), ForumThread, Comment.)<br>
+Model properties should be lower case, snake_case.<br> (For example: $this->updated_at, $this->title.)<br>
+Methods in your models in Laravel projects, like all methods in your Laravel projects, should be camelCase.<br> (For example: public function get(), public function getAll().)<br>
+
+<b>Models</b><br>
+HasOne or belongsTo relationship should be in camelCase.<br> (For example: public function postAuthor(), public function phone().)<br>
+hasMany, belongsToMany, hasManyThrough should be the same as the one to many naming conventions, however, it should be in plural.<br> (For example: public function comments(), public function roles().)<br>
+
+<b>Blade views</b><br>
+Blade files should be in lower case, snake_case<br> (For example: all.blade.php, all_posts.blade.php, etc)<br>
