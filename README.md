@@ -80,26 +80,26 @@ Voorbeeld: 'txbNameOfItem'<br>
 <h3>Codeer conventies Web</h3>
 
 <b>Controllers</b><br>
-Controllers should be in PascalCase.<br> (For example: BlogController, AuthController, UserController.)<br>
+Controllers moeten in PascalCase zijn.<br> (Bijvoorbeeld: BlogController, AuthController, UserController.)<br>
 
 <b>Database</b><br>
-DB tables should be in lower case.<br> (For example: posts, project_tasks, uploaded_images.)<br>
-Table column names should be in snake_case.<br> (For example: post_body, id, created_at.)<br>
-Primary Key  should normally be id.<br>
-Foreign keys should be the model name (singular), with 'id' appended to it.<br> (For example: comment_id, user_id.)<br>
+DB-tabellen moeten in kleine letters zijn.<br> (Bijvoorbeeld: posts, project_tasks, uploaded_images.)<br>
+De naam van de tabelkolommen moeten in snake_case zijn.<br> (Bijvoorbeeld: post_body, id, created_at.)<br>
+Primary Key moet normaal gesproken 'id' zijn.<br>
+Foreign keys moeten de naam van het model zijn (enkelvoudig), met 'id' eraan toegevoegd.<br> (Bijvoorbeeld: comment_id, user_id.)<br>
 
-<b>Variables</b><br>
-Normal variables should typically be in camelCase.<br> (For example: $users = ..., $bannedUsers = ...)<br>
-If the variable contains an array or collection of multiple items then the variable name should be in plural.<br> (For example: $users = User::all();)<br>
-
-<b>Models</b><br>
-A model should be in PascalCase.<br> (For example: User (\App\User or \App\Models\User, etc), ForumThread, Comment.)<br>
-Model properties should be lower case, snake_case.<br> (For example: $this->updated_at, $this->title.)<br>
-Methods in your models in Laravel projects, like all methods in your Laravel projects, should be camelCase.<br> (For example: public function get(), public function getAll().)<br>
+<b>Variabelen</b><br>
+Normale variabelen moeten meestal in camelCase zijn.<br> (Bijvoorbeeld: $users = ..., $bannedUsers = ...)<br>
+Als de variabele een array of collectie van meerdere items bevat, dan moet de variabelenaam in meervoud zijn.<br> (Bijvoorbeeld: $users = User::all();)<br>
 
 <b>Models</b><br>
-HasOne or belongsTo relationship should be in camelCase.<br> (For example: public function postAuthor(), public function phone().)<br>
-hasMany, belongsToMany, hasManyThrough should be the same as the one to many naming conventions, however, it should be in plural.<br> (For example: public function comments(), public function roles().)<br>
+Een model moet in PascalCase zijn.<br> (Bijvoorbeeld: User (\App\User of \App\Models\User, etc), ForumThread, Comment.)<br>
+Model properties moeten in kleine letters, snake_case zijn.<br> (Bijvoorbeeld: $this->updated_at, $this->title.)<br>
+Methoden in je modellen in Laravel-projecten, zoals alle methoden in je Laravel-projecten, moeten in camelCase zijn.<br> (Bijvoorbeeld: public function get(), public function getAll().)<br>
+
+<b>Relaties</b><br>
+HasOne of belongsTo relaties moeten in camelCase zijn.<br> (Bijvoorbeeld: public function postAuthor(), public function phone().)<br>
+hasMany, belongsToMany, hasManyThrough moeten dezelfde zijn als de conventies voor één-naar-veelnamen, maar het moet in meervoud zijn.<br> (Bijvoorbeeld: public function comments(), public function roles().)<br>
 
 <b>Blade views</b><br>
-Blade files should be in lower case, snake_case<br> (For example: all.blade.php, all_posts.blade.php, etc)<br>
+Blade-bestanden moeten in kleine letters, snake_case zijn<br> (Bijvoorbeeld: all.blade.php, all_posts.blade.php, etc)<br>
