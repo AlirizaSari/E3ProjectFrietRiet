@@ -2,6 +2,7 @@
 
 <h2>Ticket Format</h2>
 In iedere ticket wordt het volgende verwerkt:
+
 - **Bondige omschrijvende titel**
 - **Kleine beschrijving van de issue**
 - **Toepasselijke labels** (bijvoorbeeld: de huidige sprint, wat voor issue het is, hulp? prioriteit etc.)
@@ -15,6 +16,7 @@ Deze voorzorgs maatregelen zorgen voor rust en regelmaat in ons werken. Door dit
 
 <h2>Conventies:</h2>
 <h3>Review conventies:</h3>
+
 - **Duidelijke reviewcommits**
 - **1 reviewer**
 - **Reviewer** moet de persoon zijn die het meest betrokken is bij jouw commit
