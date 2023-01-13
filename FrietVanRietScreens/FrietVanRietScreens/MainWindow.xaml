@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Label x:Name="lblGetApi"
+               Content="Api komt hier"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Margin="220, 0, 0, 220">
+            
+        </Label>
 
+        <Button x:Name="btnGetApi"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Width="70"
+                Height="25"
+                Content="Get API"
+                Click="btnGetApi_Click" 
+                Margin="210,0,0,310">
+            
+        </Button>
     </Grid>
 </Window>

@@ -24,5 +24,10 @@ namespace FrietVanRietScreens
         {
             InitializeComponent();
         }
+
+        private void btnGetApi_Click(object sender, RoutedEventArgs e)
+        {
+            string ApiUrl = "https://63c10ff2376b9b2e64728574.mockapi.io/Friet/:endpoint";
+        }
     }
 }
