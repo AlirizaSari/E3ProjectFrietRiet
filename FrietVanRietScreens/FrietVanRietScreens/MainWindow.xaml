@@ -15,6 +15,18 @@
             
         </Label>
 
+        <TextBox x:Name="txbApiGoesHere"
+                 Text="Testing"
+                 Width="350"
+                 Height="150"
+                 Background="LightGray"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Bottom"
+                 Margin="150,0,0,125"
+                 >
+            
+        </TextBox>
+
         <Button x:Name="btnGetApi"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
