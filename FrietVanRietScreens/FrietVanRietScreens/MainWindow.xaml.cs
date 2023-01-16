@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -57,6 +58,11 @@ namespace FrietVanRietScreens
             {
                 txbApiGoesHere.Text += $"{product.Id}. Naam: {product.Name}\tBeschrijving: {product.Description}{Environment.NewLine}";
             }
+        }
+
+        private void btnUpdateApi_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
