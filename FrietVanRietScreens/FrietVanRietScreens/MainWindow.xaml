@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FrietVanRietScreens"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="mainGrid">
 
         <TextBox x:Name="txbApiGoesHere"
                  Text="Testing"
@@ -29,6 +29,7 @@
                 Margin="210,0,0,310">
             
         </Button>
+        
         <TextBox x:Name="txbUpdateId"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top" 
@@ -79,5 +80,10 @@
 
         </Button>
 
+        <!--<Image x:Name="imgFriet"
+               Source="https://cdn.maxvandaag.nl/2024/08/2231oa66-Patat-of-friet-shutterstock-900-500-890x500.jpg"
+               Width="300"
+               Height="300"/>-->
+        
     </Grid>
 </Window>
