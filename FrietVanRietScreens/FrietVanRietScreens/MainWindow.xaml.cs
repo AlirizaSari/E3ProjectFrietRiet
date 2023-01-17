@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace FrietVanRietScreens
 {
@@ -28,8 +30,9 @@ namespace FrietVanRietScreens
             InitializeComponent();
         }
 
-        private void btnGetApi_Click(object sender, RoutedEventArgs e)
+        private async void btnGetApi_Click(object sender, RoutedEventArgs e)
         {
+            string jsonString;
             string apiUrl = "https://63c544a3f80fabd877e46625.mockapi.io/Friet";
             //https://mockapi.io/projects/63c10ff2376b9b2e64728575
             
@@ -41,10 +44,9 @@ namespace FrietVanRietScreens
 
             HttpWebResponse WebResp = (HttpWebResponse)WebReq.GetResponse();
 
-            Console.WriteLine(WebResp.StatusCode);
-            Console.WriteLine(WebResp.Server);
+            Debug.WriteLine(WebResp.StatusCode);
+            Debug.WriteLine(WebResp.Server);
 
-            string jsonString;
             using (Stream stream = WebResp.GetResponseStream())   //modified from your code since the using statement disposes the stream automatically when done
             {
                 StreamReader reader = new StreamReader(stream, System.Text.Encoding.UTF8);
@@ -53,10 +55,28 @@ namespace FrietVanRietScreens
 
             List<Product> products = JsonConvert.DeserializeObject<List<Product>>(jsonString);
 
+            Image myImage = new Image();
+            myImage.Height = 300;
+            myImage.Width = 300;
+            myImage.HorizontalAlignment = HorizontalAlignment.Left;
+            myImage.VerticalAlignment = VerticalAlignment.Bottom;
+            myImage.Margin = new Thickness(this.Width / 2 - myImage.Width / 2 , 0, 0, this.Height / 2 - myImage.Height / 2);
+            myImage.Source = new BitmapImage(new Uri("https://vrieswinkel.nl/wp-content/uploads/2021/01/FREE001-2-scaled.jpg", UriKind.Absolute));            
+            mainGrid.Children.Add(myImage);
+
             foreach (Product product in products)
             {
-                txbApiGoesHere.Text += $"{product.Id}. Naam: {product.Name}\tBeschrijving: {product.Description}{Environment.NewLine}";
+                txbApiGoesHere.Text = product.Name;
+                myImage.Source = new BitmapImage(new Uri(product.Image, UriKind.Absolute));
+                await Task.Delay(4000);
+
             }
+
+        }
+
+        private void btnUpdateApi_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
