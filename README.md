@@ -3,7 +3,7 @@
 <h2>Ticket Format</h2>
 In iedere ticket wordt het volgende verwerkt:
 
-- **Bondige omschrijvende titel**
+- **<afdeling > - Bondige omschrijvende titel, bijvoorbeeld: 'Web - Tekst weghalen bestelpagina'**
 - **Kleine beschrijving van de issue**
 - **Toepasselijke labels** (bijvoorbeeld: de huidige sprint, wat voor issue het is, hulp? prioriteit etc.)
 - **Iteratie** (dit is een nieuwe feature op het planboord. dit staat gelijk aan 1 week. deze weken staan weer gelijk aan de sprints zoals wij die kennen.)
