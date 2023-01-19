@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:FrietVanRietScreens.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AdminDashboardPage">
+      Title="AdminDashboardPage"
+      Background="LightGray">
 
     <Grid>
         
