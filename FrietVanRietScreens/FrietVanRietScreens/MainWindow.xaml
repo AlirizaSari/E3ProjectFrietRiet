@@ -10,12 +10,12 @@
 
         <TextBox x:Name="txbApiGoesHere"
                  Text="Testing"
-                 Width="350"
-                 Height="150"
+                 Width="370"
+                 Height="155"
                  Background="LightGray"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Bottom"
-                 Margin="150,0,0,125"
+                 Margin="150,0,0,120"
                  >
         </TextBox>
 
@@ -24,12 +24,14 @@
                 HorizontalAlignment="Left"
                 Width="70"
                 Height="25"
+                Background="DarkRed"
+                Foreground="White"
                 Content="Get API"
                 Click="btnGetApi_Click" 
-                Margin="210,0,0,310">
-            
+                Margin="300,0,0,290">
+
         </Button>
-        
+
         <TextBox x:Name="txbUpdateId"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top" 
@@ -73,10 +75,12 @@
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
                 Width="70"
-                Height="25"
+                Height="26"
+                Background="DarkRed"
+                Foreground="White"
                 Content="Update API"
                 Click="btnUpdateApi_Click" 
-                Margin="547,0,0,69">
+                Margin="547,0,0,64">
 
         </Button>
 
@@ -84,6 +88,6 @@
                Source="https://cdn.maxvandaag.nl/2024/08/2231oa66-Patat-of-friet-shutterstock-900-500-890x500.jpg"
                Width="300"
                Height="300"/>-->
-        
+
     </Grid>
 </Window>
