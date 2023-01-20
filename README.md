@@ -49,14 +49,7 @@ Alle if-statements die niet waar zijn, krijgen geen '== false', die krijgen een 
 
 <b>Naamgevingen:</b>
 
-- **Pages**: Begin met de functie van de page in PascalCase en daarna ‘Page’. Voorbeeld: ‘InvoicePage’ of ‘HomePage’
-- **Mappen**: De naam van de map is de afdeling zoals die in de organigram staan. De naam van de map begint met hoofdletter.
-- **Knoppen**: Begin met ‘btn’ en daarna PascalCase. Voorbeeld: ‘btnDirectHome’
-- **Labels**: Begin met ‘lbl’ en daarna PascalCase. Voorbeeld: ‘lblResult’
-- **Datagridview**: Begin met ‘dgv’ en daarna PascalCase. Voorbeeld: ‘dgvInvoice’
-- **Checkbox**: Begin met 'cb' en daarna PascalCase. Voorbeeld: 'cbBkrCheck'
-- **Combobox**: Begin met ‘cbox’ en daarna PascalCase. Voorbeeld: ‘cboxColorChoice’
-- **Textbox**: Begin met 'txb' en daarna PascalCase. Voorbeeld: 'txbNameOfItem'
+Voor naamgevingen, volg deze link: https://jeffpar.github.io/kbarchive/kb/173/Q173738/
 
 <h3>Codeer conventies Web</h3>
 
