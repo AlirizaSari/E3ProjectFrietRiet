@@ -35,7 +35,7 @@
         <TextBox x:Name="txbUpdateId"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top" 
-            Margin="200,344,0,0" 
+            Margin="760,344,0,0" 
             TextWrapping="Wrap" 
             Width="120" RenderTransformOrigin="0.42,0.594"
             />
@@ -43,12 +43,12 @@
                Content="Id"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="195,0,0,106" RenderTransformOrigin="-0.648,0.468"/>
+               Margin="755,0,0,716" RenderTransformOrigin="-0.648,0.468"/>
 
         <TextBox x:Name="txbUpdateName"
-            HorizontalAlignment="Center" 
+            HorizontalAlignment="Left" 
             VerticalAlignment="Top" 
-            Margin="0,344,0,0" 
+            Margin="1040,344,0,0" 
             TextWrapping="Wrap"
             Width="120" RenderTransformOrigin="0.42,0.594"
             />
@@ -56,12 +56,12 @@
                Content="Name"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="340,0,0,106"/>
+               Margin="900,0,0,716"/>
 
         <TextBox x:Name="txbUpdateDescription"
-            HorizontalAlignment="Left" 
+            HorizontalAlignment="Center" 
             VerticalAlignment="Top" 
-            Margin="480,344,0,0" 
+            Margin="0,344,0,0" 
             TextWrapping="Wrap" 
             Width="120" RenderTransformOrigin="0.42,0.594"
             />
@@ -69,7 +69,7 @@
                Content="Description"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="480,0,0,106" RenderTransformOrigin="0.541,0.19"/>
+               Margin="1040,0,0,716" RenderTransformOrigin="0.541,0.19"/>
 
         <Button x:Name="btnUpdateApi"
                 VerticalAlignment="Top"
@@ -80,7 +80,7 @@
                 Foreground="White"
                 Content="Update API"
                 Click="btnUpdateApi_Click" 
-                Margin="620,335,0,0">
+                Margin="1184,331,0,0">
 
         </Button>
 
