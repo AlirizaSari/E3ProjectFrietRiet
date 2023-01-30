@@ -5,78 +5,82 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FrietVanRietScreens"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1080" Width="1920">
     <Grid x:Name="mainGrid">
 
         <TextBox x:Name="txbApiGoesHere"
                  Text="Testing"
-                 Width="350"
-                 Height="150"
+                 Width="400"
+                 Height="155"
                  Background="LightGray"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Bottom"
-                 Margin="150,0,0,125"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Top"
+                 Margin="0,111,0,0"
                  >
         </TextBox>
 
         <Button x:Name="btnGetApi"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Left"
-                Width="70"
-                Height="25"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Width="150"
+                Height="35"
+                Background="DarkRed"
+                Foreground="White"
                 Content="Get API"
                 Click="btnGetApi_Click" 
-                Margin="210,0,0,310">
-            
+                Margin="0,57,0,0">
+
         </Button>
-        
+
         <TextBox x:Name="txbUpdateId"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top" 
-            Margin="150,348,0,0" 
+            Margin="760,344,0,0" 
             TextWrapping="Wrap" 
-            Width="120"
+            Width="120" RenderTransformOrigin="0.42,0.594"
             />
         <Label x:Name="lblId"
                Content="Id"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="150, 0, 0, 20"/>
+               Margin="755,0,0,716" RenderTransformOrigin="-0.648,0.468"/>
 
         <TextBox x:Name="txbUpdateName"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top" 
-            Margin="275,348,0,0" 
+            Margin="1040,344,0,0" 
             TextWrapping="Wrap"
-            Width="120"
+            Width="120" RenderTransformOrigin="0.42,0.594"
             />
         <Label x:Name="lblName"
                Content="Name"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="275, 0, 0, 20"/>
+               Margin="900,0,0,716"/>
 
         <TextBox x:Name="txbUpdateDescription"
-            HorizontalAlignment="Left" 
+            HorizontalAlignment="Center" 
             VerticalAlignment="Top" 
-            Margin="400,348,0,0" 
+            Margin="0,344,0,0" 
             TextWrapping="Wrap" 
-            Width="120"
+            Width="120" RenderTransformOrigin="0.42,0.594"
             />
         <Label x:Name="lblDescription"
                Content="Description"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="400, 0, 0, 20"/>
+               Margin="1040,0,0,716" RenderTransformOrigin="0.541,0.19"/>
 
         <Button x:Name="btnUpdateApi"
-                VerticalAlignment="Bottom"
+                VerticalAlignment="Top"
                 HorizontalAlignment="Left"
-                Width="70"
-                Height="25"
+                Width="150"
+                Height="35"
+                Background="DarkRed"
+                Foreground="White"
                 Content="Update API"
                 Click="btnUpdateApi_Click" 
-                Margin="547,0,0,69">
+                Margin="1184,331,0,0">
 
         </Button>
 
@@ -84,6 +88,6 @@
                Source="https://cdn.maxvandaag.nl/2024/08/2231oa66-Patat-of-friet-shutterstock-900-500-890x500.jpg"
                Width="300"
                Height="300"/>-->
-        
+
     </Grid>
 </Window>
