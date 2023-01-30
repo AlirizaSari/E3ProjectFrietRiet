@@ -56,8 +56,8 @@ namespace FrietVanRietScreens
             List<Product> products = JsonConvert.DeserializeObject<List<Product>>(jsonString);
 
             Image myImage = new Image();
-            myImage.Height = 300;
-            myImage.Width = 300;
+            myImage.Height = 200;
+            myImage.Width = 200;
             myImage.HorizontalAlignment = HorizontalAlignment.Left;
             myImage.VerticalAlignment = VerticalAlignment.Bottom;
             myImage.Margin = new Thickness(this.Width / 2 - myImage.Width / 2 , 0, 0, this.Height / 2 - myImage.Height / 2);

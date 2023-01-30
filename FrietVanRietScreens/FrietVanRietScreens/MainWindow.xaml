@@ -6,81 +6,81 @@
         xmlns:local="clr-namespace:FrietVanRietScreens"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="mainGrid">
+    <Grid x:Name="mainGrid" Margin="0,0,0,-16">
 
         <TextBox x:Name="txbApiGoesHere"
                  Text="Testing"
-                 Width="370"
+                 Width="400"
                  Height="155"
                  Background="LightGray"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Bottom"
-                 Margin="150,0,0,120"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Top"
+                 Margin="0,111,0,0"
                  >
         </TextBox>
 
         <Button x:Name="btnGetApi"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Left"
-                Width="70"
-                Height="25"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Width="150"
+                Height="35"
                 Background="DarkRed"
                 Foreground="White"
                 Content="Get API"
                 Click="btnGetApi_Click" 
-                Margin="300,0,0,290">
+                Margin="0,57,0,0">
 
         </Button>
 
         <TextBox x:Name="txbUpdateId"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top" 
-            Margin="150,348,0,0" 
+            Margin="200,344,0,0" 
             TextWrapping="Wrap" 
-            Width="120"
+            Width="120" RenderTransformOrigin="0.42,0.594"
             />
         <Label x:Name="lblId"
                Content="Id"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="150, 0, 0, 20"/>
+               Margin="195,0,0,106" RenderTransformOrigin="-0.648,0.468"/>
 
         <TextBox x:Name="txbUpdateName"
-            HorizontalAlignment="Left" 
+            HorizontalAlignment="Center" 
             VerticalAlignment="Top" 
-            Margin="275,348,0,0" 
+            Margin="0,344,0,0" 
             TextWrapping="Wrap"
-            Width="120"
+            Width="120" RenderTransformOrigin="0.42,0.594"
             />
         <Label x:Name="lblName"
                Content="Name"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="275, 0, 0, 20"/>
+               Margin="340,0,0,106"/>
 
         <TextBox x:Name="txbUpdateDescription"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top" 
-            Margin="400,348,0,0" 
+            Margin="480,344,0,0" 
             TextWrapping="Wrap" 
-            Width="120"
+            Width="120" RenderTransformOrigin="0.42,0.594"
             />
         <Label x:Name="lblDescription"
                Content="Description"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="400, 0, 0, 20"/>
+               Margin="480,0,0,106" RenderTransformOrigin="0.541,0.19"/>
 
         <Button x:Name="btnUpdateApi"
-                VerticalAlignment="Bottom"
+                VerticalAlignment="Top"
                 HorizontalAlignment="Left"
-                Width="70"
-                Height="26"
+                Width="150"
+                Height="35"
                 Background="DarkRed"
                 Foreground="White"
                 Content="Update API"
                 Click="btnUpdateApi_Click" 
-                Margin="547,0,0,64">
+                Margin="620,335,0,0">
 
         </Button>
 
