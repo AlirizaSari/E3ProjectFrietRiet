@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FrietVanRietScreens"
         mc:Ignorable="d"
+<<<<<<< HEAD
         Title="MainWindow" Height="450" Width="800">
     <Grid x:Name="mainGrid" Margin="0,0,0,-16">
+=======
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid x:Name="mainGrid">
+>>>>>>> de94ab05b863ed0da6659d85c600368e3f77a0e0
 
         <TextBox x:Name="txbApiGoesHere"
                  Text="Testing"
