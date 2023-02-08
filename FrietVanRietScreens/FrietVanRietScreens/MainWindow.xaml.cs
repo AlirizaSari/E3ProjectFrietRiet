@@ -28,6 +28,8 @@ namespace FrietVanRietScreens
         public MainWindow()
         {
             InitializeComponent();
+
+            webFriet.Navigate("https://www.frietvanriet.nl/home");
         }
 
         private async void btnGetApi_Click(object sender, RoutedEventArgs e)

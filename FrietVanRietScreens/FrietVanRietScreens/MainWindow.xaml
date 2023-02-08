@@ -44,6 +44,10 @@
             Click="btnGoToMenu_Click" 
             Margin="0,293,0,0">
         </Button>
+        <WebBrowser x:Name="webFriet"
+                    Width="888"
+                    Height="500"
+                    />
 
         <!--<TextBox x:Name="txbUpdateId"
             HorizontalAlignment="Left" 
@@ -113,4 +117,5 @@
                Height="300"/>-->
 
     </Grid>
+
 </Window>
