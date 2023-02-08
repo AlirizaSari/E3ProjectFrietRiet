@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -15,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Xceed.Wpf.Toolkit.PropertyGrid.Attributes;
 
 namespace FrietVanRietScreens
 {
@@ -52,8 +54,10 @@ namespace FrietVanRietScreens
                 lstProductsName.Items.Add(((Product)product).Name);
                 lstProductsDescription.Items.Add(((Product)product).Description);
                 lstProductsPrice.Items.Add(((Product)product).Price.ToString());
-
+                
             }
+
+            
         }
     }
 }
