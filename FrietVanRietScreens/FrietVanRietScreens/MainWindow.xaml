@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FrietVanRietScreens"
         mc:Ignorable="d"
+        WindowState="Maximized"
+        WindowStyle="None"
         Title="MainWindow" Height="1080" Width="1920">
     <Grid x:Name="mainGrid">
 
@@ -32,14 +34,14 @@
 
         </Button>
 
-        <TextBox x:Name="txbUpdateId"
+        <!--<TextBox x:Name="txbUpdateId"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top" 
             Margin="760,344,0,0" 
             TextWrapping="Wrap" 
             Width="120" RenderTransformOrigin="0.42,0.594"
-            />
-        <Label x:Name="lblId"
+            />-->
+        <!--<Label x:Name="lblId"
                Content="Id"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
@@ -81,7 +83,6 @@
                 Content="Update API"
                 Click="btnUpdateApi_Click" 
                 Margin="1184,331,0,0">
-
         </Button>
         <Button x:Name="btnGoToMenu"
             VerticalAlignment="Top"
@@ -93,6 +94,7 @@
             Content="Go To Menu"
             Click="btnGoToMenu_Click" 
             Margin="281,189,0,0"/>
+        </Button>-->
 
         <!--<Image x:Name="imgFriet"
                Source="https://cdn.maxvandaag.nl/2024/08/2231oa66-Patat-of-friet-shutterstock-900-500-890x500.jpg"
