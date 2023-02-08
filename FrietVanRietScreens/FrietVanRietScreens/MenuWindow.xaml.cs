@@ -14,29 +14,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Threading;
 
 namespace FrietVanRietScreens
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MenuWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MenuWindow : Window
     {
-        public MainWindow()
+        public MenuWindow()
         {
             InitializeComponent();
-        }
-
-        private async void btnGetApi_Click(object sender, RoutedEventArgs e)
-        {
             string jsonString;
             string apiUrl = "https://63c544a3f80fabd877e46625.mockapi.io/Friet";
             //https://mockapi.io/projects/63c10ff2376b9b2e64728575
-            
-            txbApiGoesHere.Text = "";
 
             HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create(string.Format(apiUrl));
 
@@ -55,38 +47,13 @@ namespace FrietVanRietScreens
 
             List<Product> products = JsonConvert.DeserializeObject<List<Product>>(jsonString);
 
-            Image myImage = new Image();
-            myImage.Height = 200;
-            myImage.Width = 200;
-            myImage.HorizontalAlignment = HorizontalAlignment.Left;
-            myImage.VerticalAlignment = VerticalAlignment.Bottom;
-            myImage.Margin = new Thickness(this.Width / 2 - myImage.Width / 2 , 0, 0, this.Height / 2 - myImage.Height / 2);
-            myImage.Source = new BitmapImage(new Uri("https://vrieswinkel.nl/wp-content/uploads/2021/01/FREE001-2-scaled.jpg", UriKind.Absolute));            
-            mainGrid.Children.Add(myImage);
-
             foreach (Product product in products)
             {
-                txbApiGoesHere.Text = product.Name;
-                txbApiGoesHere.Text += "-";
-                txbApiGoesHere.Text += product.Description;
-                txbApiGoesHere.Text += "-";
-                txbApiGoesHere.Text += product.Price;
-                myImage.Source = new BitmapImage(new Uri(product.Image, UriKind.Absolute));
-                await Task.Delay(4000);
+                lstProductsName.Items.Add(((Product)product).Name);
+                lstProductsDescription.Items.Add(((Product)product).Description);
+                lstProductsPrice.Items.Add(((Product)product).Price.ToString());
 
             }
-
-        }
-
-        private void btnUpdateApi_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnGoToMenu_Click(object sender, RoutedEventArgs e)
-        {
-            MenuWindow menuWindow = new MenuWindow();
-            menuWindow.Show();
         }
     }
 }
