@@ -6,10 +6,27 @@
         xmlns:local="clr-namespace:FrietVanRietScreens"
         mc:Ignorable="d"
         Title="MenuWindow" Height="1080" Width="1920"
+        WindowState="Maximized"
+        WindowStyle="None"
         Background="Bisque">
     <Grid>
-        <Label Content="Menu" HorizontalAlignment="Left" Margin="54,23,0,0" VerticalAlignment="Top" Height="36" Width="117" FontSize="20" FontWeight="Bold"/>
-        <ListView x:Name="lstProductsName" Margin="54,64,1726,709" d:ItemsSource="{d:SampleData ItemCount=5}" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Center" BorderThickness="0,0,0,0">
+        <Label x:Name="lblMenu" 
+               Content="Menu" 
+               HorizontalAlignment="Left" 
+               Margin="54,23,0,0" 
+               VerticalAlignment="Top" 
+               Height="36" Width="117" 
+               FontSize="20" 
+               FontWeight="Bold"/>
+        
+        <ListView x:Name="lstProductsName"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Left"
+                  Margin="54,64,0,0" 
+                  d:ItemsSource="{d:SampleData ItemCount=5}" 
+                  ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                  VerticalContentAlignment="Center" 
+                  BorderThickness="0,0,0,0">
             <ListView.Background>
                 <SolidColorBrush Color="White" Opacity="0.025"/>
             </ListView.Background>
@@ -27,9 +44,16 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="lstProductsDescription" Margin="199,64,1492,709" d:ItemsSource="{d:SampleData ItemCount=5}" AutomationProperties.IsColumnHeader="True" BorderThickness="0,0,0,0">
+        <ListView x:Name="lstProductsDescription" 
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Left"
+                  Margin="199,64,0,0" 
+                  d:ItemsSource="{d:SampleData ItemCount=5}" 
+                  AutomationProperties.IsColumnHeader="True" 
+                  BorderThickness="0,0,0,0">
             <ListView.BorderBrush>
-                <SolidColorBrush Color="White" Opacity="0"/>
+                <SolidColorBrush Color="White" 
+                                 Opacity="0"/>
             </ListView.BorderBrush>
             <ListView.Background>
                 <SolidColorBrush Color="White" Opacity="0"/>
@@ -45,7 +69,13 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="lstProductsPrice" Margin="433,64,1347,709" d:ItemsSource="{d:SampleData ItemCount=5}" AutomationProperties.IsColumnHeader="True" BorderThickness="0,0,0,0">
+        <ListView x:Name="lstProductsPrice"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Left"
+                  Margin="433,64,0,0" 
+                  d:ItemsSource="{d:SampleData ItemCount=5}" 
+                  AutomationProperties.IsColumnHeader="True" 
+                  BorderThickness="0,0,0,0">
             <ListView.Background>
                 <SolidColorBrush Color="Bisque" Opacity="0"/>
             </ListView.Background>
