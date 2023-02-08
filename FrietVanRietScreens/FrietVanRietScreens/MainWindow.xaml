@@ -83,6 +83,16 @@
                 Margin="1184,331,0,0">
 
         </Button>
+        <Button x:Name="btnGoToMenu"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Width="150"
+            Height="35"
+            Background="DarkRed"
+            Foreground="White"
+            Content="Go To Menu"
+            Click="btnGoToMenu_Click" 
+            Margin="281,189,0,0"/>
 
         <!--<Image x:Name="imgFriet"
                Source="https://cdn.maxvandaag.nl/2024/08/2231oa66-Patat-of-friet-shutterstock-900-500-890x500.jpg"
