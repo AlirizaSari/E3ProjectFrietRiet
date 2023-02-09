@@ -5,10 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FrietVanRietBrowserApp"
         mc:Ignorable="d"
+        WindowState="Maximized"
+        WindowStyle="None"
         xmlns:cefsharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1080" Width="1920">
     <Grid>
-        <cefsharp:ChromiumWebBrowser Address="www.frietvanriet.nl"/>
+        <cefsharp:ChromiumWebBrowser x:Name="webFriet"
+            Address="www.frietvanriet.nl"/>
 
     </Grid>
 </Window>
