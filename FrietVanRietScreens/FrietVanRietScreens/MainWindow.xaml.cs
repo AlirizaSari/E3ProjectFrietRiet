@@ -28,8 +28,6 @@ namespace FrietVanRietScreens
         public MainWindow()
         {
             InitializeComponent();
-
-            webFriet.Navigate("https://www.frietvanriet.nl/home");
         }
 
         private async void btnGetApi_Click(object sender, RoutedEventArgs e)
@@ -75,7 +73,6 @@ namespace FrietVanRietScreens
                 txbApiGoesHere.Text += product.Price;
                 myImage.Source = new BitmapImage(new Uri(product.Image, UriKind.Absolute));
                 await Task.Delay(4000);
-
             }
 
         }

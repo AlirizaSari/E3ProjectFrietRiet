@@ -44,77 +44,10 @@
             Click="btnGoToMenu_Click" 
             Margin="0,293,0,0">
         </Button>
-        <WebBrowser x:Name="webFriet"
-                    Width="888"
-                    Height="500"
-                    />
+        
+        
 
-        <!--<TextBox x:Name="txbUpdateId"
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Top" 
-            Margin="760,344,0,0" 
-            TextWrapping="Wrap" 
-            Width="120" RenderTransformOrigin="0.42,0.594"
-            />-->
-        <!--<Label x:Name="lblId"
-               Content="Id"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left"
-               Margin="755,0,0,716" RenderTransformOrigin="-0.648,0.468"/>
-
-        <TextBox x:Name="txbUpdateName"
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Top" 
-            Margin="1040,344,0,0" 
-            TextWrapping="Wrap"
-            Width="120" RenderTransformOrigin="0.42,0.594"
-            />
-        <Label x:Name="lblName"
-               Content="Name"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left"
-               Margin="900,0,0,716"/>
-
-        <TextBox x:Name="txbUpdateDescription"
-            HorizontalAlignment="Center" 
-            VerticalAlignment="Top" 
-            Margin="0,344,0,0" 
-            TextWrapping="Wrap" 
-            Width="120" RenderTransformOrigin="0.42,0.594"
-            />
-        <Label x:Name="lblDescription"
-               Content="Description"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left"
-               Margin="1040,0,0,716" RenderTransformOrigin="0.541,0.19"/>
-
-        <Button x:Name="btnUpdateApi"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Width="150"
-                Height="35"
-                Background="DarkRed"
-                Foreground="White"
-                Content="Update API"
-                Click="btnUpdateApi_Click" 
-                Margin="1184,331,0,0">
-        </Button>
-        <Button x:Name="btnGoToMenu"
-            VerticalAlignment="Top"
-            HorizontalAlignment="Left"
-            Width="150"
-            Height="35"
-            Background="DarkRed"
-            Foreground="White"
-            Content="Go To Menu"
-            Click="btnGoToMenu_Click" 
-            Margin="281,189,0,0"/>
-        </Button>-->
-
-        <!--<Image x:Name="imgFriet"
-               Source="https://cdn.maxvandaag.nl/2024/08/2231oa66-Patat-of-friet-shutterstock-900-500-890x500.jpg"
-               Width="300"
-               Height="300"/>-->
+        
 
     </Grid>
 
