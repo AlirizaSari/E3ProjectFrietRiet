@@ -73,7 +73,6 @@ namespace FrietVanRietScreens
                 txbApiGoesHere.Text += product.Price;
                 myImage.Source = new BitmapImage(new Uri(product.Image, UriKind.Absolute));
                 await Task.Delay(4000);
-
             }
 
         }
