@@ -23,6 +23,7 @@ namespace FrietVanRietBrowserApp
         public MainWindow()
         {
             InitializeComponent();
+            webFriet.Address = "www.frietvanriet.nl/galerij";
         }
     }
 }
