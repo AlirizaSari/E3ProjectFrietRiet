@@ -1,6 +1,7 @@
 ﻿using FrietVanRietBrowserApp.Pages;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,7 @@ namespace FrietVanRietBrowserApp
             InitializeComponent();
             //webFriet.Address = "www.frietvanriet.nl/galerij";
             frPages.Content = new PageAdminPanel();
+            Debug.WriteLine(SystemParameters.BorderWidth);
         }
     }
 }

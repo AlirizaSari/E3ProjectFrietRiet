@@ -8,13 +8,17 @@
         WindowState="Maximized"
         WindowStyle="None"
         xmlns:cefsharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
-        Title="MainWindow" Height="1080" Width="1920">
+        Title="MainWindow" 
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}" 
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}">
     <Grid>
         <!--<cefsharp:ChromiumWebBrowser x:Name="webFriet"
             Address="www.frietvanriet.nl"/>-->
         <Frame x:Name="frPages"
-               Width="1280"
-               Height="720">
+               Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+               Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left">
             
         </Frame>
     </Grid>
