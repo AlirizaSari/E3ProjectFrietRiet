@@ -24,5 +24,12 @@ namespace FrietVanRietBrowserApp.Pages
         {
             InitializeComponent();
         }
+
+        private void btnPreview_Click(object sender, RoutedEventArgs e)
+        {
+            string hello = "Test gelukt";
+
+            this.NavigationService.Navigate(new PageMenu(txbAddUrl.Text));
+        }
     }
 }

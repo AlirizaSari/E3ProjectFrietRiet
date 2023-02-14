@@ -18,7 +18,8 @@
                Width="{x:Static SystemParameters.PrimaryScreenWidth}"
                Height="{x:Static SystemParameters.PrimaryScreenHeight}"
                VerticalAlignment="Bottom"
-               HorizontalAlignment="Left">
+               HorizontalAlignment="Left"
+               NavigationUIVisibility="Hidden">
             
         </Frame>
     </Grid>

@@ -26,7 +26,7 @@ namespace FrietVanRietBrowserApp
         {
             InitializeComponent();
             //webFriet.Address = "www.frietvanriet.nl/galerij";
-            frPages.Content = new PageMenu();
+            frPages.Content = new PageAdminPanel();
         }
     }
 }

@@ -11,6 +11,52 @@
       Title="PageAdminPanel">
 
     <Grid>
-        
+        <Button x:Name="btnConfirm"
+                Height="50"
+                Width="200"
+                Content="Confirm"
+                FontWeight="Bold"
+                FontSize="20"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="120,0,0,120">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="btnPreview"
+                Height="50"
+                Width="200"
+                Content="Preview"
+                FontWeight="Bold"
+                FontSize="20"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="350,0,0,120" Click="btnPreview_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Label x:Name="lblAddSite"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Margin="120,0,0,250"
+               FontSize="20"
+               Content="Add Site"/>
+        <TextBox x:Name="txbAddUrl"
+            VerticalAlignment="Bottom" 
+            HorizontalAlignment="Left" 
+            Margin="120,0,0,200" 
+            TextWrapping="Wrap" 
+            Height="40"
+            Text="TextBox" 
+            Width="425"
+            FontSize="20"/>
     </Grid>
 </Page>

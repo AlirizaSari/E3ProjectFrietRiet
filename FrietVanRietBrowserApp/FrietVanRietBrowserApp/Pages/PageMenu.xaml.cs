@@ -1,6 +1,7 @@
 ﻿using CefSharp;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,9 +22,11 @@ namespace FrietVanRietBrowserApp.Pages
     /// </summary>
     public partial class PageMenu : Page
     {
-        public PageMenu()
+        public PageMenu(string receiveMessage)
         {
             InitializeComponent();
+
+            webFriet.Address = receiveMessage;
         }
     }
 }
