@@ -23,12 +23,15 @@ namespace FrietVanRietBrowserApp.Pages
     public partial class PageMenu : Page
     {
         List<string> _receiveMessage = new List<string>();
+        decimal _cycleSpeed;
 
-        public PageMenu(List<string> receiveMessage)
+
+        public PageMenu(List<string> receiveMessage, decimal cycleSpeed)
         {
             InitializeComponent();
 
             _receiveMessage = receiveMessage;
+            _cycleSpeed = cycleSpeed;
 
         }
 
@@ -37,7 +40,7 @@ namespace FrietVanRietBrowserApp.Pages
             foreach (string url in _receiveMessage)
             {
                 webFriet.Address = url;
-                await Task.Delay(7000);
+                await Task.Delay((int)_cycleSpeed);
             }
         }
     }

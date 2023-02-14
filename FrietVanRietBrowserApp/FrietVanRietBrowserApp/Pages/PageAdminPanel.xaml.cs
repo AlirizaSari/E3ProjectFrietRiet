@@ -21,6 +21,7 @@ namespace FrietVanRietBrowserApp.Pages
     public partial class PageAdminPanel : Page
     {
         List<string> _urlCollection= new List<string>();
+        decimal _cycleSpeed = 1;
         
 
         public PageAdminPanel()
@@ -32,7 +33,7 @@ namespace FrietVanRietBrowserApp.Pages
 
         private void btnPreview_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new PageMenu(_urlCollection));
+            this.NavigationService.Navigate(new PageMenu(_urlCollection, _cycleSpeed * 1000));
         }
 
         private void btnConfirm_Click(object sender, RoutedEventArgs e)
@@ -42,6 +43,11 @@ namespace FrietVanRietBrowserApp.Pages
                 _urlCollection.Add(txbAddUrl.Text);
                 lblURL.Content += $"{txbAddUrl.Text}{Environment.NewLine}";
                 txbAddUrl.Text = "";
+            }
+
+            if(!string.IsNullOrEmpty(txbCycleSpeed.Text))
+            {
+                var cycleSpeed = decimal.TryParse(txbCycleSpeed.Text, out _cycleSpeed);
             }
         }
     }

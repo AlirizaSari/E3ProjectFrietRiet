@@ -46,17 +46,35 @@
         <Label x:Name="lblAddSite"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="120,0,0,250"
+               Margin="120,0,0,350"
                FontSize="20"
                Content="Add Site"/>
+        
         <TextBox x:Name="txbAddUrl"
             VerticalAlignment="Bottom" 
             HorizontalAlignment="Left" 
-            Margin="120,0,0,200" 
+            Margin="120,0,0,300" 
             TextWrapping="Wrap" 
             Height="40" 
             Width="747"
             FontSize="20"/>
+
+        <TextBox x:Name="txbCycleSpeed"
+                 VerticalAlignment="Bottom"
+                 HorizontalAlignment="Left"
+                 Height="40"
+                 Width="200"
+                 Text="12"
+                 FontSize="20"
+                 Margin="120,0,0,200"/>
+
+        <Label x:Name="lblCycleSpeed"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Content="Cycle speed (seconds)"
+               Margin="120,0,0,235"
+               FontSize="20"
+               />
 
         <Label x:Name="lblURL"
                VerticalAlignment="Bottom"
