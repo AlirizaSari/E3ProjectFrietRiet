@@ -11,9 +11,6 @@
       Title="PageAdminPanel">
 
     <Grid>
-        <cefsharp:ChromiumWebBrowser x:Name="webFriet"
-                                     Width="{x:Static SystemParameters.PrimaryScreenWidth}"
-                                     Height="{x:Static SystemParameters.PrimaryScreenWidth}"
-            Address="www.frietvanriet.nl"/>
+        
     </Grid>
 </Page>
