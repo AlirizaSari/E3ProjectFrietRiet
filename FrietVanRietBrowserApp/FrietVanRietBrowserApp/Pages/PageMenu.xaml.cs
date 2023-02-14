@@ -22,11 +22,23 @@ namespace FrietVanRietBrowserApp.Pages
     /// </summary>
     public partial class PageMenu : Page
     {
-        public PageMenu(string receiveMessage)
+        List<string> _receiveMessage = new List<string>();
+
+        public PageMenu(List<string> receiveMessage)
         {
             InitializeComponent();
 
-            webFriet.Address = receiveMessage;
+            _receiveMessage = receiveMessage;
+
+        }
+
+        private async void webFriet_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (string url in _receiveMessage)
+            {
+                webFriet.Address = url;
+                await Task.Delay(7000);
+            }
         }
     }
 }

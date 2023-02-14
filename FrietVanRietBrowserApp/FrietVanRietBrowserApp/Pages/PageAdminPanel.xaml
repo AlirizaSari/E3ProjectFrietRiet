@@ -19,7 +19,7 @@
                 FontSize="20"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Margin="120,0,0,120">
+                Margin="120,0,0,120" Click="btnConfirm_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -35,7 +35,7 @@
                 FontSize="20"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Margin="350,0,0,120" Click="btnPreview_Click">
+                Margin="345,0,0,120" Click="btnPreview_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -54,9 +54,15 @@
             HorizontalAlignment="Left" 
             Margin="120,0,0,200" 
             TextWrapping="Wrap" 
-            Height="40"
-            Text="TextBox" 
-            Width="425"
+            Height="40" 
+            Width="747"
             FontSize="20"/>
+
+        <Label x:Name="lblURL"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Margin="1000,0,0,500"
+               
+               Content="Test"/>
     </Grid>
 </Page>
