@@ -20,16 +20,35 @@ namespace FrietVanRietBrowserApp.Pages
     /// </summary>
     public partial class PageAdminPanel : Page
     {
+        List<string> _urlCollection= new List<string>();
+        decimal _cycleSpeed = 1;
+        
+
         public PageAdminPanel()
         {
             InitializeComponent();
+
+            lblURL.Content = "";
         }
 
         private void btnPreview_Click(object sender, RoutedEventArgs e)
         {
-            string hello = "Test gelukt";
+            this.NavigationService.Navigate(new PageMenu(_urlCollection, _cycleSpeed * 1000));
+        }
 
-            this.NavigationService.Navigate(new PageMenu(txbAddUrl.Text));
+        private void btnConfirm_Click(object sender, RoutedEventArgs e)
+        {
+            if(!string.IsNullOrEmpty(txbAddUrl.Text))
+            {
+                _urlCollection.Add(txbAddUrl.Text);
+                lblURL.Content += $"{txbAddUrl.Text}{Environment.NewLine}";
+                txbAddUrl.Text = "";
+            }
+
+            if(!string.IsNullOrEmpty(txbCycleSpeed.Text))
+            {
+                var cycleSpeed = decimal.TryParse(txbCycleSpeed.Text, out _cycleSpeed);
+            }
         }
     }
 }

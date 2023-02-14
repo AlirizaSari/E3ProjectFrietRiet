@@ -19,7 +19,7 @@
                 FontSize="20"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Margin="120,0,0,120">
+                Margin="120,0,0,120" Click="btnConfirm_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -35,7 +35,7 @@
                 FontSize="20"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Margin="350,0,0,120" Click="btnPreview_Click">
+                Margin="345,0,0,120" Click="btnPreview_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -46,17 +46,41 @@
         <Label x:Name="lblAddSite"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="120,0,0,250"
+               Margin="120,0,0,350"
                FontSize="20"
                Content="Add Site"/>
+        
         <TextBox x:Name="txbAddUrl"
             VerticalAlignment="Bottom" 
             HorizontalAlignment="Left" 
-            Margin="120,0,0,200" 
+            Margin="120,0,0,300" 
             TextWrapping="Wrap" 
-            Height="40"
-            Text="TextBox" 
-            Width="425"
+            Height="40" 
+            Width="747"
             FontSize="20"/>
+
+        <TextBox x:Name="txbCycleSpeed"
+                 VerticalAlignment="Bottom"
+                 HorizontalAlignment="Left"
+                 Height="40"
+                 Width="200"
+                 Text="12"
+                 FontSize="20"
+                 Margin="120,0,0,200"/>
+
+        <Label x:Name="lblCycleSpeed"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Content="Cycle speed (seconds)"
+               Margin="120,0,0,235"
+               FontSize="20"
+               />
+
+        <Label x:Name="lblURL"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Margin="1000,0,0,500"
+               
+               Content="Test"/>
     </Grid>
 </Page>
