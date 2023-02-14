@@ -1,4 +1,4 @@
-﻿using FrietVanRietBrowserApp.Pages;
+﻿using CefSharp;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,18 +15,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FrietVanRietBrowserApp
+namespace FrietVanRietBrowserApp.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PageMenu.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageMenu : Page
     {
-        public MainWindow()
+        public PageMenu(string receiveMessage)
         {
             InitializeComponent();
-            //webFriet.Address = "www.frietvanriet.nl/galerij";
-            frPages.Content = new PageAdminPanel();
+
+            webFriet.Address = receiveMessage;
         }
     }
 }
