@@ -10,8 +10,12 @@
         xmlns:cefsharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         Title="MainWindow" Height="1080" Width="1920">
     <Grid>
-        <cefsharp:ChromiumWebBrowser x:Name="webFriet"
-            Address="www.frietvanriet.nl"/>
-
+        <!--<cefsharp:ChromiumWebBrowser x:Name="webFriet"
+            Address="www.frietvanriet.nl"/>-->
+        <Frame x:Name="frPages"
+               Width="1280"
+               Height="720">
+            
+        </Frame>
     </Grid>
 </Window>
