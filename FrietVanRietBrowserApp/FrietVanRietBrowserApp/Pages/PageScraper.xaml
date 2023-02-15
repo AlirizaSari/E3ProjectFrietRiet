@@ -16,6 +16,6 @@
                 Height="20"
                 Width="65"
                 Content="Scrape me"
-                Margin="120,0,0,120"/>
+                Margin="120,0,0,120" Click="btnGetScraper_Click"/>
     </Grid>
 </Page>
