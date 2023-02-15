@@ -43,6 +43,22 @@
             </Button.Resources>
         </Button>
 
+        <Button x:Name="btnScrapePage"
+                Height="50"
+                Width="200"
+                Content="Scrape pagina"
+                FontWeight="Bold"
+                FontSize="20"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="570,0,0,120" Click="btnScrape_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
         <Label x:Name="lblAddSite"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"

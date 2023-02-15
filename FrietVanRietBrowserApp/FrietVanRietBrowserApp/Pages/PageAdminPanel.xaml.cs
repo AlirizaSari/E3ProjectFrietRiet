@@ -47,8 +47,14 @@ namespace FrietVanRietBrowserApp.Pages
 
             if(!string.IsNullOrEmpty(txbCycleSpeed.Text))
             {
-                var cycleSpeed = decimal.TryParse(txbCycleSpeed.Text, out _cycleSpeed);
+                _ = decimal.TryParse(txbCycleSpeed.Text, out _cycleSpeed);
             }
+        }
+
+        private void btnScrape_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new PageScraper());
+
         }
     }
 }
