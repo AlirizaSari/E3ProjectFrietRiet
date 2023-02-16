@@ -21,7 +21,7 @@
         <Label x:Name="lblMenuItems"
                VerticalAlignment="Top"
                HorizontalAlignment="Left"
-               Margin="120,120,0,0"
+               Margin="20,20,0,0"
                />
     </Grid>
 </Page>

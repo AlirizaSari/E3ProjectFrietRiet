@@ -47,14 +47,19 @@ namespace FrietVanRietBrowserApp.Pages
             var myHtmlDoc = web.Load(url);
 
             var getArticle = myHtmlDoc.DocumentNode.SelectNodes("//*[@itemtype=\"http://schema.org/Product\"]/div/h4[@itemprop=\"name\"]/text()");
+            var getPrice = myHtmlDoc.DocumentNode.SelectNodes("//*[@itemtype=\"http://schema.org/Offer\"]//div//span[@itemprop=\"price\"]/text()");
+
+
+            
             int counter = 1;
             foreach(var item in getArticle )
             {
-                if(counter % 5 == 0)
+
+                if(counter % 4 == 0)
                 {
                     lblMenuItems.Content += $"{Environment.NewLine}";
                 }
-                lblMenuItems.Content += $"{item.InnerText}\t\t";
+                lblMenuItems.Content += $"{item.InnerText}\t\t\t\t\t";
                 counter++;
             }
 

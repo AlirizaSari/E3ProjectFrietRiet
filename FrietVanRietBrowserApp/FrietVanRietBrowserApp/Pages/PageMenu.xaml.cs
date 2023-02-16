@@ -35,7 +35,7 @@ namespace FrietVanRietBrowserApp.Pages
 
             if (receiveMessage.Count == 0)
             {
-                webFriet.Address = "https://frietvanriet.foodticket.nl/foodticket/cgi/bestel.cgi";
+                webFriet.Address = "https://frietvanriet.foodticket.nl/foodticket/cgi/bestel.cgi#menu";
             }
 
             _cycleSpeed = cycleSpeed;
