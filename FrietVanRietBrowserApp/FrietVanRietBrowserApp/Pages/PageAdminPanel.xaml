@@ -7,19 +7,21 @@
       mc:Ignorable="d" 
       d:DesignHeight="{x:Static SystemParameters.PrimaryScreenHeight}" d:DesignWidth="{x:Static SystemParameters.PrimaryScreenWidth}"
       xmlns:cefsharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
-      Background="LightBlue"
+      Background="LightGray"
       Title="PageAdminPanel">
 
     <Grid>
         <Button x:Name="btnConfirm"
                 Height="50"
                 Width="200"
-                Content="Confirm"
+                Content="Bevestigen"
                 FontWeight="Bold"
                 FontSize="20"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Margin="120,0,0,120" Click="btnConfirm_Click">
+                Margin="120,0,0,120" Click="btnConfirm_Click"
+                Foreground="White"
+                Background="#C15330">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -30,12 +32,14 @@
         <Button x:Name="btnPreview"
                 Height="50"
                 Width="200"
-                Content="Preview"
+                Content="Voorbeeld"
                 FontWeight="Bold"
                 FontSize="20"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Margin="345,0,0,120" Click="btnPreview_Click">
+                Margin="667,0,0,120" Click="btnPreview_Click"
+                Foreground="White"
+                Background="#C15330">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -48,7 +52,7 @@
                HorizontalAlignment="Left"
                Margin="120,0,0,350"
                FontSize="20"
-               Content="Add Site"/>
+               Content="Voeg een site link toe:"/>
         
         <TextBox x:Name="txbAddUrl"
             VerticalAlignment="Bottom" 
@@ -71,7 +75,7 @@
         <Label x:Name="lblCycleSpeed"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Content="Cycle speed (seconds)"
+               Content="Cyclus Snelheid (Seconden)"
                Margin="120,0,0,235"
                FontSize="20"
                />
@@ -79,8 +83,31 @@
         <Label x:Name="lblURL"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="1000,0,0,500"
-               
-               Content="Test"/>
+               Margin="1000,0,0,500"/>
+        
+        <Button x:Name="btnClearLinks"
+            Height="50"
+            Width="200"
+            Content="Maak de lijst leeg"
+            FontWeight="Bold"
+            FontSize="20"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="394,0,0,120"
+            Foreground="White"
+            Background="#C15330" Click="btnClearLinks_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label x:Name="lblError" 
+            Content="Label" 
+            HorizontalAlignment="Left" 
+            Margin="374,843,0,0" 
+            Foreground="red"
+            FontSize="20"
+            VerticalAlignment="Top"/>
     </Grid>
 </Page>
