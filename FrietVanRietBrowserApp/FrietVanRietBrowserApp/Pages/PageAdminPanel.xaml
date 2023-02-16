@@ -79,8 +79,6 @@
         <Label x:Name="lblURL"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
-               Margin="1000,0,0,500"
-               
-               Content="Test"/>
+               Margin="1000,0,0,500"/>
     </Grid>
 </Page>
