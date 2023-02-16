@@ -17,5 +17,11 @@
                 Width="65"
                 Content="Scrape me"
                 Margin="120,0,0,120" Click="btnGetScraper_Click"/>
+
+        <Label x:Name="lblMenuItems"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               Margin="120,120,0,0"
+               />
     </Grid>
 </Page>

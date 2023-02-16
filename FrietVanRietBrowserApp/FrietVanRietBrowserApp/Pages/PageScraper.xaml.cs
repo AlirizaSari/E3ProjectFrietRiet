@@ -40,38 +40,24 @@ namespace FrietVanRietBrowserApp.Pages
 
         private void btnGetScraper_Click(object sender, RoutedEventArgs e)
         {
-  //          var html =
-  //      @"<TD class=texte width=""50%"">
-		//	<DIV align=right>Name :<B> </B></DIV>
-		//</TD>
-		//<TD width=""50%"">
-  //  		<INPUT class=box value=John itemscope='test' maxLength=16 size=16 name=user_name>
-  //  		<INPUT class=box value=Tony itemscope='test' maxLength=16 size=16 name=user_name>
-  //  		<INPUT class=box value=Jams itemscope='test' maxLength=16 size=16 name=user_name>
-  //          <p itemscope='hallo'>Goedendag</p>
-		//</TD>
-		//<TR vAlign=center>";
-
-  //          var htmlDoc = new HtmlDocument();
-  //          htmlDoc.LoadHtml(html);
+            lblMenuItems.Content = "";
 
             string url = "https://frietvanriet.foodticket.nl/foodticket/cgi/bestel.cgi#menu";
             HtmlWeb web = new HtmlWeb();
             var myHtmlDoc = web.Load(url);
 
-            var getArticle = myHtmlDoc.DocumentNode.SelectNodes("//*[@itemtype=\"http://schema.org/Product\"]");
+            var getArticle = myHtmlDoc.DocumentNode.SelectNodes("//*[@itemtype=\"http://schema.org/Product\"]/div/h4[@itemprop=\"name\"]/text()");
+            int counter = 1;
+            foreach(var item in getArticle )
+            {
+                if(counter % 5 == 0)
+                {
+                    lblMenuItems.Content += $"{Environment.NewLine}";
+                }
+                lblMenuItems.Content += $"{item.InnerText}\t\t";
+                counter++;
+            }
 
-
-
-            //string myName = htmlDoc.Text;
-
-
-            //string name = htmlDoc.DocumentNode
-            //                .SelectNodes("//td/p")
-            //                .First()
-            //                .Attributes["itemscope"].Value;
-
-            //Console.WriteLine(name);
         }
     }
 }
