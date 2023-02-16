@@ -35,11 +35,13 @@ namespace FrietVanRietBrowserApp.Pages
         {
             InitializeComponent();
 
+            lblMenuItems.Width = SystemParameters.PrimaryScreenWidth - 20;
             
         }
 
         private void btnGetScraper_Click(object sender, RoutedEventArgs e)
         {
+            lblMenuItems.FontSize = 15;
             lblMenuItems.Content = "";
 
             string url = "https://frietvanriet.foodticket.nl/foodticket/cgi/bestel.cgi#menu";
@@ -50,19 +52,38 @@ namespace FrietVanRietBrowserApp.Pages
             var getPrice = myHtmlDoc.DocumentNode.SelectNodes("//*[@itemtype=\"http://schema.org/Offer\"]//div//span[@itemprop=\"price\"]/text()");
 
 
-            
+            int fourCounter = 0;
             int counter = 1;
             foreach(var item in getArticle )
             {
 
-                if(counter % 4 == 0)
+                if (item.InnerText.ToString().Contains("+"))
                 {
-                    lblMenuItems.Content += $"{Environment.NewLine}";
+                    continue;
                 }
-                lblMenuItems.Content += $"{item.InnerText}\t\t\t\t\t";
-                counter++;
+                else
+                {
+                    if (counter % 4 == 0)
+                    {
+                        lblMenuItems.Content += $"{Environment.NewLine}";
+                        if (fourCounter < 4)
+                        {
+                            fourCounter++;
+                        }
+                        else
+                        {
+                            fourCounter = 0;
+                        }
+                    }
+                    lblMenuItems.Content += $"{item.InnerText,-50}{string.Empty,10}{getPrice[counter - 1].InnerText,10}";
+                    counter++;
+                }
+
+
+                
             }
 
         }
+
     }
 }
