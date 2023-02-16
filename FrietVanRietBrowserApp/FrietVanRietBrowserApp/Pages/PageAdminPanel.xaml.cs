@@ -39,6 +39,8 @@ namespace FrietVanRietBrowserApp.Pages
                 lblURL.Content += theLine;
             }
 
+            lblError.Content = string.Empty;
+
         }
 
         private void btnPreview_Click(object sender, RoutedEventArgs e)
@@ -54,6 +56,11 @@ namespace FrietVanRietBrowserApp.Pages
         {
             if(!string.IsNullOrEmpty(txbAddUrl.Text))
             {
+                if (txbAddUrl.Text.Contains(" "))
+                {
+                    lblError.Content = "Links mogen geen spaties bevatten!";
+                    return;
+                }
                 _urlCollection.Add(txbAddUrl.Text);
                 lblURL.Content += $"{txbAddUrl.Text}{Environment.NewLine}";
                 //txbAddUrl.Text = "";
@@ -62,8 +69,13 @@ namespace FrietVanRietBrowserApp.Pages
                     bestand.WriteLine(txbAddUrl.Text);
                 }
             }
+        }
 
-
+        private void btnClearLinks_Click(object sender, RoutedEventArgs e)
+        {
+            File.WriteAllText("websiteurls.txt", String.Empty);
+            lblURL.Content = String.Empty;
+            _urlCollection.Clear();
         }
     }
 }
