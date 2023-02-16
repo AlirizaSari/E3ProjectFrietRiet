@@ -30,16 +30,21 @@ namespace FrietVanRietBrowserApp.Pages
         {
             InitializeComponent();
 
-            string readFile = File.ReadAllText("websiteurls.txt");
-
-            string[] splitLine = readFile.Split('\n');
-            foreach (var theLine in splitLine)
+            if (File.Exists("WebsiteUrl.txt"))
             {
-                _urlCollection.Add(theLine);
-                lblURL.Content += theLine;
+                string readFile = File.ReadAllText("WebsiteUrl.txt");
+
+                string[] splitLine = readFile.Split('\n');
+                foreach (var theLine in splitLine)
+                {
+                    _urlCollection.Add(theLine);
+                    lblURL.Content += theLine;
+                }
+
             }
 
             lblError.Content = string.Empty;
+            
 
         }
 
@@ -64,7 +69,7 @@ namespace FrietVanRietBrowserApp.Pages
                 _urlCollection.Add(txbAddUrl.Text);
                 lblURL.Content += $"{txbAddUrl.Text}{Environment.NewLine}";
                 //txbAddUrl.Text = "";
-                using (StreamWriter bestand = File.AppendText("websiteurls.txt"))
+                using (StreamWriter bestand = File.AppendText("WebsiteUrl.txt"))
                 {
                     bestand.WriteLine(txbAddUrl.Text);
                 }
@@ -74,7 +79,7 @@ namespace FrietVanRietBrowserApp.Pages
 
         private void btnClearLinks_Click(object sender, RoutedEventArgs e)
         {
-            File.WriteAllText("websiteurls.txt", String.Empty);
+            File.WriteAllText("WebsiteUrl.txt", String.Empty);
             lblURL.Content = String.Empty;
             _urlCollection.Clear();
 
