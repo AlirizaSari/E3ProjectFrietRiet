@@ -55,7 +55,9 @@
                 FontSize="20"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Margin="570,0,0,120" Click="btnScrape_Click">
+                Margin="892,0,0,120"
+                Foreground="White"
+                Background="#C15330" Click="btnScrape_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -69,7 +71,7 @@
                Margin="120,0,0,350"
                FontSize="20"
                Content="Voeg een site link toe:"/>
-        
+
         <TextBox x:Name="txbAddUrl"
             VerticalAlignment="Bottom" 
             HorizontalAlignment="Left" 
@@ -100,7 +102,7 @@
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
                Margin="1000,0,0,500"/>
-        
+
         <Button x:Name="btnClearLinks"
             Height="50"
             Width="200"
