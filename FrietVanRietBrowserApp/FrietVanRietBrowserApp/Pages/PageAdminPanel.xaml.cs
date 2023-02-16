@@ -71,11 +71,19 @@ namespace FrietVanRietBrowserApp.Pages
             }
         }
 
+
         private void btnClearLinks_Click(object sender, RoutedEventArgs e)
         {
             File.WriteAllText("websiteurls.txt", String.Empty);
             lblURL.Content = String.Empty;
             _urlCollection.Clear();
+
+        }
+
+        private void btnScrape_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new PageScraper());
+
         }
     }
 }

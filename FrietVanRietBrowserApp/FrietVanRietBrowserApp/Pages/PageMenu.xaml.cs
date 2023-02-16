@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,6 +32,12 @@ namespace FrietVanRietBrowserApp.Pages
             InitializeComponent();
 
             _receiveMessage = receiveMessage;
+
+            if (receiveMessage.Count == 0)
+            {
+                webFriet.Address = "https://frietvanriet.foodticket.nl/foodticket/cgi/bestel.cgi#menu";
+            }
+
             _cycleSpeed = cycleSpeed;
 
         }
