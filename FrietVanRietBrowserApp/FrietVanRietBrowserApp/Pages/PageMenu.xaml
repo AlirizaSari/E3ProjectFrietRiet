@@ -15,7 +15,7 @@
         <cefsharp:ChromiumWebBrowser x:Name="webFriet"
                                      Width="{x:Static SystemParameters.PrimaryScreenWidth}"
                                      Height="{x:Static SystemParameters.PrimaryScreenWidth}"
-            Address="https://frietvanriet.foodticket.nl/foodticket/cgi/bestel.cgi" Loaded="webFriet_Loaded"/>
+             Loaded="webFriet_Loaded"/>
 
         
     </Grid>
