@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CefSharp.DevTools.Debugger;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,11 +30,25 @@ namespace FrietVanRietBrowserApp.Pages
         {
             InitializeComponent();
 
-            lblURL.Content = "";
+            string readFile = File.ReadAllText("websiteurls.txt");
+
+            string[] splitLine = readFile.Split('\n');
+            foreach (var theLine in splitLine)
+            {
+                _urlCollection.Add(theLine);
+                lblURL.Content += theLine;
+            }
+
+            lblError.Content = string.Empty;
+
         }
 
         private void btnPreview_Click(object sender, RoutedEventArgs e)
         {
+            if (!string.IsNullOrEmpty(txbCycleSpeed.Text))
+            {
+                var cycleSpeed = decimal.TryParse(txbCycleSpeed.Text, out _cycleSpeed);
+            }
             this.NavigationService.Navigate(new PageMenu(_urlCollection, _cycleSpeed * 1000));
         }
 
@@ -40,15 +56,28 @@ namespace FrietVanRietBrowserApp.Pages
         {
             if(!string.IsNullOrEmpty(txbAddUrl.Text))
             {
+                if (txbAddUrl.Text.Contains(" "))
+                {
+                    lblError.Content = "Links mogen geen spaties bevatten!";
+                    return;
+                }
                 _urlCollection.Add(txbAddUrl.Text);
                 lblURL.Content += $"{txbAddUrl.Text}{Environment.NewLine}";
-                txbAddUrl.Text = "";
+                //txbAddUrl.Text = "";
+                using (StreamWriter bestand = File.AppendText("websiteurls.txt"))
+                {
+                    bestand.WriteLine(txbAddUrl.Text);
+                }
             }
+        }
 
-            if(!string.IsNullOrEmpty(txbCycleSpeed.Text))
-            {
-                _ = decimal.TryParse(txbCycleSpeed.Text, out _cycleSpeed);
-            }
+
+        private void btnClearLinks_Click(object sender, RoutedEventArgs e)
+        {
+            File.WriteAllText("websiteurls.txt", String.Empty);
+            lblURL.Content = String.Empty;
+            _urlCollection.Clear();
+
         }
 
         private void btnScrape_Click(object sender, RoutedEventArgs e)
