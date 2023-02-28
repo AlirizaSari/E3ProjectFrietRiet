@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FrietVanRietBrowserApp"
         mc:Ignorable="d"
-        WindowState="Maximized"
-        WindowStyle="None"
+        WindowState="Normal"
+        WindowStyle="ToolWindow"
         xmlns:cefsharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         Title="MainWindow" 
         Height="{x:Static SystemParameters.PrimaryScreenHeight}" 
@@ -22,5 +22,15 @@
                NavigationUIVisibility="Hidden">
             
         </Frame>
+
+        <Button x:Name="btnFullscreen"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="0,20,20,0"
+                Height="40"
+                Width="120"
+                Content="Fullscreen"
+                FontSize="20" Click="btnFullscreen_Click"
+                />
     </Grid>
 </Window>

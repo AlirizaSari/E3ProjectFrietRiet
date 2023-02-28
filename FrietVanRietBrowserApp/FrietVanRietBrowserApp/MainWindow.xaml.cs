@@ -29,5 +29,21 @@ namespace FrietVanRietBrowserApp
             frPages.Content = new PageAdminPanel();
 
         }
+
+        private void btnFullscreen_Click(object sender, RoutedEventArgs e)
+        {
+            if(WindowState == WindowState.Normal)
+            {
+                WindowState = WindowState.Maximized;
+                WindowStyle = WindowStyle.None;
+                btnFullscreen.Content = "Minimize";
+            }
+            else if (WindowState == WindowState.Maximized)
+            {
+                WindowState = WindowState.Normal;
+                WindowStyle = WindowStyle.ToolWindow;
+                btnFullscreen.Content = "Maximize";
+            }
+        }
     }
 }

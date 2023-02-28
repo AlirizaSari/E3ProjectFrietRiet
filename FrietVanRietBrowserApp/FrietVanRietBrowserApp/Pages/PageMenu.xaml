@@ -9,7 +9,8 @@
       d:DesignWidth="{x:Static SystemParameters.PrimaryScreenWidth}"
       xmlns:cefsharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
       Background="LightBlue"
-      Title="PageMenu">
+      Title="PageMenu"
+      >
 
     <Grid>
         <cefsharp:ChromiumWebBrowser x:Name="webFriet"
@@ -17,6 +18,5 @@
                                      Height="{x:Static SystemParameters.PrimaryScreenWidth}"
              Loaded="webFriet_Loaded"/>
 
-        
     </Grid>
 </Page>
