@@ -50,5 +50,10 @@ namespace FrietVanRietBrowserApp.Pages
                 await Task.Delay((int)_cycleSpeed);
             }
         }
+
+        private void btnFullscreen_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
