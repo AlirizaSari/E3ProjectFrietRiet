@@ -9,8 +9,8 @@
         WindowStyle="ToolWindow"
         xmlns:cefsharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         Title="MainWindow" 
-        Height="{x:Static SystemParameters.PrimaryScreenHeight}" 
-        Width="{x:Static SystemParameters.PrimaryScreenWidth}">
+        Height="750" 
+        Width="1550">
     <Grid>
         <!--<cefsharp:ChromiumWebBrowser x:Name="webFriet"
             Address="www.frietvanriet.nl"/>-->
