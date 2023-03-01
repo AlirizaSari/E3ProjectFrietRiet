@@ -123,9 +123,9 @@
         <Label x:Name="lblError" 
             Content="Label" 
             HorizontalAlignment="Left" 
-            Margin="374,843,0,0" 
+            Margin="374,0,0,200" 
             Foreground="red"
             FontSize="20"
-            VerticalAlignment="Top"/>
+            VerticalAlignment="Bottom"/>
     </Grid>
 </Page>
