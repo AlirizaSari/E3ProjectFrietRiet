@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -28,8 +30,11 @@ namespace FrietVanRietBrowserApp.Pages
 
         public PageAdminPanel()
         {
+
             InitializeComponent();
 
+            lblError.Content = String.Empty;
+            
             if (File.Exists("WebsiteUrl.txt"))
             {
                 string readFile = File.ReadAllText("WebsiteUrl.txt");
@@ -43,9 +48,35 @@ namespace FrietVanRietBrowserApp.Pages
 
             }
 
-            lblError.Content = string.Empty;
-            
+            if (!CheckConnection("https://google.nl"))
+            {
+                lblError.Content = "Geen internet gedetecteerd";
+            }
+        }
 
+        private bool CheckConnection(String URL)
+        {
+            try
+            {
+                if (!URL.StartsWith("https://"))
+                {
+                    URL = "https://" + URL;
+                }
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
+                request.Timeout = 5000;
+                request.Credentials = CredentialCache.DefaultNetworkCredentials;
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+                if (response.StatusCode == HttpStatusCode.OK)
+                    return true;
+                else
+                    return false;
+
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         private void btnPreview_Click(object sender, RoutedEventArgs e)
@@ -63,7 +94,7 @@ namespace FrietVanRietBrowserApp.Pages
             {
                 if (txbAddUrl.Text.Contains(" "))
                 {
-                    lblError.Content = "Links mogen geen spaties bevatten!";
+                    lblError.Content = "Links mogen geen spaties bevatten";
                     return;
                 }
                 _urlCollection.Add(txbAddUrl.Text);
