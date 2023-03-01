@@ -45,5 +45,10 @@ namespace FrietVanRietBrowserApp
                 btnFullscreen.Content = "Maximize";
             }
         }
+
+        private void btnBackToMain_Click(object sender, RoutedEventArgs e)
+        {
+            frPages.Content = new PageAdminPanel();
+        }
     }
 }

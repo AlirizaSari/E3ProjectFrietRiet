@@ -9,8 +9,8 @@
         WindowStyle="ToolWindow"
         xmlns:cefsharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         Title="MainWindow" 
-        Height="750" 
-        Width="1550">
+        Height="720" 
+        Width="1280">
     <Grid>
         <!--<cefsharp:ChromiumWebBrowser x:Name="webFriet"
             Address="www.frietvanriet.nl"/>-->
@@ -32,5 +32,17 @@
                 Content="Fullscreen"
                 FontSize="20" Click="btnFullscreen_Click"
                 />
+        
+        <Button x:Name="btnBackToMain"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="0,20,160,0"
+                Height="40"
+                Width="120"
+                Content="Adminpaneel"
+                FontSize="20" 
+                Click="btnBackToMain_Click"
+                />
+        
     </Grid>
 </Window>
