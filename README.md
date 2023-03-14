@@ -1,4 +1,4 @@
-# Friet van Riet!
+# Friet van Riet
 
 <h2>Ticket Format</h2>
 In iedere ticket wordt het volgende verwerkt:
